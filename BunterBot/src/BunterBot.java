@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import javax.security.auth.login.LoginException;
  
 import net.dv8tion.jda.api.JDA;
@@ -15,7 +19,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class BunterBot extends ListenerAdapter {
-    private static final String TOKEN = "Nzk3OTk2NTIyMjgwOTc2NDA1.X_umLA.CAL9uS-HxKsJCNR15y8ZS5_XnxA";
+    private static final String TOKEN = getToken();
     public static JDA jda;
     public static void main(String[] args) throws LoginException {
         jda = JDABuilder.createDefault(TOKEN).build();
@@ -23,15 +27,22 @@ public class BunterBot extends ListenerAdapter {
         jda.getPresence().setActivity(Activity.watching("Mr. Inbetween")); 
         jda.addEventListener(new BunterBot());
     }
-
-    @Override 
-    public void onGuildMemberJoined(GuildMemberJoinEvent event) {
-        User user = event.getUser();
-        Member member = event.getMember();
-        System.out.println(user.getName());
-        System.out.println(member.getNickname());
-        
+    
+    
+    public static String getToken() {
+        try {
+            File tokenFile = new File("./src/token.txt");
+            Scanner read = new Scanner(tokenFile);
+            String token = read.nextLine();
+            System.out.println(token);
+            read.close();
+            return token;
+        } catch (FileNotFoundException e) {
+            System.out.println("File was not found");
+            return "";
+        }
     }
+
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         Message msg = event.getMessage();
