@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "JDA-4.2.1_266-withDependencies.jar"
+    ]
+}
