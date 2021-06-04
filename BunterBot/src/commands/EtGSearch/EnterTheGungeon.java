@@ -1,17 +1,15 @@
-package commands;
+package commands.EtGSearch;
  
-import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.EmbedBuilder; 
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.awt.Color; 
  
-import java.io.IOException;
-import java.util.Map;
+import java.io.IOException; 
 
-import commands.GungeonItemParser.ParseItem;
+import commands.EtGSearch.GungeonItemParser.ParseItem;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -117,7 +115,7 @@ public class EnterTheGungeon extends ListenerAdapter {
         int indexOf = json.indexOf("*");
         return json.substring(0, indexOf) + "content" + json.substring(indexOf + 1);  
     }
-    
+
     private String run(String url) throws IOException {
         Request request = new Request.Builder()
             .url(url)

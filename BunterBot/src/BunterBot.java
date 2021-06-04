@@ -1,27 +1,17 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
-import java.awt.Color;
+ 
 
 import javax.security.auth.login.LoginException;
 
-import commands.EnterTheGungeon;
-import net.dv8tion.jda.api.EmbedBuilder;
+import commands.EtGSearch.EnterTheGungeon; 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
-import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.entities.ChannelType;
-import net.dv8tion.jda.api.entities.Member;
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.MessageChannel;
-import net.dv8tion.jda.api.entities.User;
-import net.dv8tion.jda.api.events.ReadyEvent;
-import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
-import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.dv8tion.jda.api.entities.Activity; 
+import net.dv8tion.jda.api.events.ReadyEvent; 
+import net.dv8tion.jda.api.hooks.ListenerAdapter; 
 
 public class BunterBot extends ListenerAdapter { 
     private static final String TOKEN = getToken();

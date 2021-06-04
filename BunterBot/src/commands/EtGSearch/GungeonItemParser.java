@@ -1,8 +1,7 @@
-package commands;
+package commands.EtGSearch;
 
 import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.HashMap; 
 import java.util.Map;
 
 import com.google.gson.Gson;
