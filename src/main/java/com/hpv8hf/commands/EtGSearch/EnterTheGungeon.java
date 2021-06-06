@@ -1,4 +1,4 @@
-package commands.EtGSearch;
+package com.hpv8hf.commands.EtGSearch;//package commands.EtGSearch;
  
 import net.dv8tion.jda.api.EmbedBuilder; 
 import net.dv8tion.jda.api.entities.MessageChannel;
@@ -9,7 +9,7 @@ import java.awt.Color;
  
 import java.io.IOException; 
 
-import commands.EtGSearch.GungeonItemParser.ParseItem;
+import com.hpv8hf.commands.EtGSearch.GungeonItemParser.ParseItem;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
