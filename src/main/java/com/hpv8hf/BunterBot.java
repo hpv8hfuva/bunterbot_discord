@@ -1,3 +1,5 @@
+package com.hpv8hf;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -5,7 +7,7 @@ import java.util.Scanner;
 
 import javax.security.auth.login.LoginException;
 
-import commands.EtGSearch.EnterTheGungeon; 
+import com.hpv8hf.commands.EtGSearch.EnterTheGungeon;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;

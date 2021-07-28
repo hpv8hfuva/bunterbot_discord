@@ -1,4 +1,4 @@
-package commands.EtGSearch;
+package com.hpv8hf.commands.EtGSearch;//package commands.EtGSearch;
 
 import java.lang.reflect.Type;
 import java.util.HashMap; 
